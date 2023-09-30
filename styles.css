@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+  div {
+    display: block;
+  }
+  
+  .container {
+    max-width: auto;
+    margin: 50; 
+    padding: 0px; 
+
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 9fr 3fr; /* Define the column widths */
+    max-width: 80rem;
+    margin: 0 auto; /* Center the grid horizontally */
+    background-color: rgb(20, 68, 156);
+}
+
+/* Style for the logo */
+.logo {
+    color: black;
+}
+
+/* Style for images within the columns */
+.columns img {
+    max-width: 100%; /* Ensure images don't exceed their container width */
+    height: auto; /* Maintain image aspect ratio */
+    margin-top: 10;
+}
+
+.text-widget h1 img {
+  height: 80%;
+  width: 80%;
+  margin-top: 10;
+}
+
+
+/* CSS for the navbar */
+.navbar {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f7f7f7;
+    z-index: 100;
+    transition: background-color 0.3s;
+    padding: 10px 20px;
+  }
+  
+  
+  /* CSS for the logo */
+  .logo {
+    display: flex; 
+    align-items: left;
+    color: black;
+  }
+  
+  /* CSS for the logo text */
+  .logo h2 {
+    margin-right: 20px;
+    font-weight: lighter;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    border: 1px solid transparent;
+    padding: 12px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-weight: lighter;
+    border: 0.5px solid rgb(155, 155, 155);
+
+    
+  }
+  
+  .nav-links a:hover {
+
+    background-color: rgb(155, 155, 155);
+
+  }
+  .nav-links a.active {
+    background-color: rgb(155, 155, 155);
+}
+  
+  
+/* CSS for the hamburger menu */
+.hamburger-menu {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+  }
+  .menu-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.menu-label {
+    margin-right: 5px;
+    color: black;
+    display: none;
+}
+
+@media (max-width: 899px) {
+
+
+  .nav-links {
+
+font-size: 12px;
+margin: 0;
+padding: 0;
+
+  }
+
+  .navbar{
+    padding: 8;
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-label {
+    display: block;
+  }
+
+  .hamburger-menu {
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; 
+    text-align: right;
+
+  }
+
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 59px;
+    right: 0; 
+    background-color: #f7f7f7;
+    width: auto;
+    text-align: left; 
+    margin-top: 5px;
+    border: 0;
+  }
+
+  .nav-links.active li {
+    padding: 10px 20px; 
+
+  }
+
+  .nav-links a.active {
+    background-color: white;
+}
+
+.nav-links a:hover {
+
+  background-color: white;
+
+}
+
+  .nav-links a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 0px 0;
+    border: 0;
+  }
+}
+
+  /* CSS for the submenu container */
+.has-submenu {
+  position: relative;
+}
+
+/* CSS for submenu items */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white; 
+  margin-top: 13px;
+  list-style: none;
+  z-index: 1; 
+}
+
+/* Show the submenu when hovering over the parent item */
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+/* Style for submenu items */
+.submenu li {
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+  
+}
+
+/* Style for submenu links */
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 10px 10px;
+  
+}
+
+/* Style for submenu links on hover */
+.submenu a:hover {
+  background-color: #333; 
+  color: white;
+}
+
+.arrow-icon {
+  margin-left: 5px; 
+    font-size: 12px;
+}
+
+/* Style for submenu items */
+.has-submenu2 {
+  position: relative;
+}
+
+/* Style for submenu2 */
+.submenu2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  border: 1px solid #333; 
+
+  list-style: none;
+  z-index: 1;
+}
+
+/* Show submenu2 when hovering over the parent item */
+.has-submenu2:hover .submenu2 {
+  display: block;
+}
+
+/* Style for submenu items */
+.submenu2 li {
+  margin: 0;
+  font-weight: lighter;
+}
+
+/* Style for submenu links */
+.submenu2 a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 10px 10px; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Style for submenu links on hover */
+.submenu2 a:hover {
+  background-color: #333; 
+  color: white; 
+}
+
+/* CSS for the arrow icon */
+.has-arrow .arrow-icon {
+
+  font-size: 12px; 
+  transform: rotate(90deg); 
+  display: inline-block;
+}

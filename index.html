@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+<link rel="stylesheet" href="styles.css">
+<title>Department of Education</title>
+</head>
+<body>
+  
+    
+    <main class="container">
+        <div class="container">
+        <nav class="navbar">
+            <div class="logo" >
+                <h2 style="margin-right: 20px; font-weight: lighter; font-size: 20px; font-family: 'Lobster', cursive;">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">GOVPH</a>
+                </h2>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                
+                <li><a href="#background" onclick="closeNav()" class="active">Home</a></li>
+                <li class="has-submenu">
+                    <a href="#portfolio">About<span class="arrow-icon">&#9660;</span></a>
+                    <ul class="submenu">
+                        <li class="has-submenu2">
+                            <a href="#about1" class="has-arrow">Overview<span> &#9654;</span></a>
+                            <ul class="submenu2">
+                                <li><a href="#sub-item1">History</a></li>
+                                <li><a href="#sub-item2">Vision, Mission, Core Values, and Mandate</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#about2">Organizational Structure</a></li>
+                        <li><a href="#about2">DepEd Data Privacy</a></li>
+                        <li><a href="#about2">Citizen's Charter</a></li>
+                        <li><a href="#about2">Careers</a></li>
+                    </ul>
+                </li>
+                <li><a href="#experience" onclick="closeNav()" >The Secretary</a></li>
+                <li><a href="#interest" onclick="closeNav()" >K to 12</a></li>
+                <li><a href="#contact"  onclick="closeNav()">Resources</a></li>
+                <li><a href="#contact"  onclick="closeNav()">Procurement</a></li>
+                <li><a href="#contact"  onclick="closeNav()">Contact Us</a></li>
+                <li><a href="#contact"  onclick="closeNav()">Regions</a></li>
+                <li><input></li>
+            </ul>
+            <div class="menu-container">
+                <div class="menu-label">Menu</div>
+                <div class="hamburger-menu" onclick="toggleNav()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div> 
+        </nav>
+    </div>
+    </main>
+
+    <main class="body">
+        <div class="row">
+            <div class="large-9 columns">
+                <h1 class="logo">
+                    <a href="#deped"><img src="images/DepEd-Website-header-110px_1(2).png" alt="DepEd Logo"></a>
+                </h1>
+            </div>
+            <div class="large-3 columns">
+                <div id="text-2" class="ear-content widget anchor widget_text">
+                    <div class="text-widget">
+                        <h1 class="logo">
+                            <a href="#"><img src="images/transparency-seal-160x160.png" alt="Transparency Seal"></a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+ 
+
+    <script>
+            function toggleNav() {
+    var navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
+    var navLinksContainer = document.querySelector(".nav-links-container");
+    navLinksContainer.classList.toggle("active");
+}
+    </script>
+
+</body>
+</html>
