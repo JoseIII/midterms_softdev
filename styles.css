@@ -40,9 +40,14 @@
   }
 
   .carousel img {
-    flex: 1 0 100%;
+    flex: 1;
+    object-fit: cover; /* This will make the image cover the entire container */
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    height: 100%; /* Ensure the image takes up the full height of its container */
     scroll-snap-align: start;
-  }
+    position: relative;
+}
+
 
   .carousel-nav {
     display: flex;
@@ -60,7 +65,7 @@
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background-color: #f7f7f7;
+    background-color: black;
     opacity: 0.75;
     transition: opacity ease 250ms;
   }
